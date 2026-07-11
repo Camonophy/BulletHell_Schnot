@@ -1,0 +1,89 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<image src="ui/crosshair038.png" @ref="CrosshairImage" />
+</root>
+
+<style>
+	Crosshair
+	{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	image
+	{
+		width: 72px;
+		height: 72px;
+		position: absolute;
+	}
+}
+</style>
+
+@code
+{
+	/*
+	Der Code sorgt dafür, dass der echte Mauszeiger durch ein Crosshair ersetzt wird.
+	Außerdem sorgt er für ein korrektes Mapping zur echten Maus im Editor.
+	*/
+	public Panel CrosshairImage { get; set; }
+
+	[Property] public Vector2 RealScreenResolution { get; set; } = new Vector2( 1920, 1080 );
+
+	[Property] public int FramesToWaitBeforeCorrection { get; set; } = 8;
+
+	private float correction = 1f;
+
+	protected override async void OnStart()
+	{
+
+
+		/*
+		Im Editor ist der sichtbare Spiel-Viewport kleiner als der
+		tatsächliche Monitor. Mouse.Position bezieht sich aber auf den echten Bildschirm.
+		Ohne Korrektur würde das Fadenkreuz immer weiter vom echten Mauszeiger wegdriften,
+		je weiter man sich von der oberen linken Ecke entfernt.
+		Außerhalb des Editors (im fertigen Spiel) tritt dieses Problem
+		nicht auf, deshalb bleibt "correction" dort bei 1,1 (keine Wirkung).
+		*/
+		if ( Game.IsEditor )
+		{
+
+			/*
+			Der Editor-Viewport hat beim allerersten Frame manchmal noch nicht
+			seine finale Größe erreicht oder noch gar nicht berechnet. Wir warten deshalb solange,
+			bis die ScreenSize sich nicht mehr ändert, bevor wir
+			den Korrekturfaktor berechnen sonst würde er mit einer falschen,
+			noch nicht fertig layouteten Screen.Size berechnet werden. Konkret: FramesToWaitBeforeCorrection viele Frames
+			*/
+
+			for ( int i = 0; i < FramesToWaitBeforeCorrection; i++ )
+			{
+				await Task.Frame();
+			}
+			// S&Box skaliert die gesamte UI einheitlich, basierend NUR auf der Höhe, deshalb reicht hier y aus.
+			correction = RealScreenResolution.y / Screen.Size.y;
+		}
+	}
+
+	protected override void OnUpdate()
+	{
+		if ( CrosshairImage is null ) return;
+	
+		var localPos = Panel.ScreenPositionToPanelPosition( Mouse.Position ) * correction;
+	
+		Log.Info( $"Screen: {Mouse.Position}, Panel: {localPos}, ScreenSize: {Screen.Size}, Correction: {correction}" );
+	
+		CrosshairImage.Style.Left = Length.Pixels( localPos.x - 36 );
+		CrosshairImage.Style.Top = Length.Pixels( localPos.y - 36 );
+	}
+
+	protected override int BuildHash() => 0;
+}

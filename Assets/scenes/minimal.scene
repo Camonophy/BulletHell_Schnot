@@ -60,6 +60,7 @@
           "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
           "__enabled": true,
           "Flags": 0,
+          "ContactShadows": true,
           "Contribution": "Diffuse, Specular, Transmissive",
           "FogMode": "Enabled",
           "FogStrength": 1,
@@ -173,7 +174,7 @@
           "CreateAttachments": false,
           "LodOverride": null,
           "MaterialGroup": null,
-          "MaterialOverride": "materials/subzero-studios/ground/ground045.vmat",
+          "MaterialOverride": "materials/subzero-studios/ground/ground047.vmat",
           "Materials": null,
           "Model": "models/dev/plane.vmdl",
           "OnComponentDestroy": null,
@@ -189,7 +190,7 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "0.39546,0.51163,0.27128,1"
+          "Tint": "0.86512,0.86512,0.86512,1"
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -342,6 +343,7 @@
           "BodyMass": 500,
           "BodyRadius": 16,
           "BrakePower": 1,
+          "CameraCollisionIgnore": "",
           "CameraOffset": "256,0,0",
           "ColliderObject": {
             "_type": "gameobject",
@@ -497,6 +499,18 @@
           "RemoveUnownedItems": true,
           "Source": "OwnerConnection",
           "WorkshopItems": []
+        },
+        {
+          "__type": "TodDownAim",
+          "__guid": "34ed180b-b896-441e-992f-9e2551edb1e1",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": [
@@ -637,6 +651,62 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "7340910f-23ec-416c-b580-3dbc49d5038a",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "0,0,1",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "4f7faa19-9b2d-44f0-b9d3-de3d535c274c",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": {
+            "_type": "component",
+            "component_id": "b792af1b-2746-4e93-b63d-a74d27fe28b8",
+            "go": "42196b3a-d959-45ff-a43a-083c3392e5fb",
+            "component_type": "CameraComponent"
+          },
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.Crosshair",
+          "__guid": "37b2e0ce-4f5a-4a96-91d5-7b60bd438821",
+          "__enabled": true,
+          "Flags": 0,
+          "FramesToWaitBeforeCorrection": 8,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RealScreenResolution": "1920,1080"
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -677,7 +747,7 @@
   "Title": "minimal",
   "Description": null,
   "__references": [
-    "subzerostudios.ground045#147330"
+    "subzerostudios.ground047#147332"
   ],
   "__version": 3
 }
