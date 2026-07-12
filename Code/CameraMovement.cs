@@ -19,8 +19,6 @@ public sealed class CameraMovement : Component
 	[Property]
 	public float MouseOffsetStrength = 0.3f;
 
-	// Wie weit sich die Kamera durch die Maus maximal verschieben darf,
-	// damit es bei extremen Mausposition nicht komplett ausufert.
 	[Property]
 	public float MaxMouseOffset = 300f;
 

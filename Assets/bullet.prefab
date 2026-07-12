@@ -1,0 +1,186 @@
+{
+  "RootObject": {
+    "__guid": "d23aa618-3bd3-436e-a243-ad2ce9766978",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "bullet",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "0.100000001,0.100000001,0.100000001",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "4d9b9bcf-926f-4be1-9850-eb065ddeab96",
+        "__enabled": true,
+        "Flags": 0,
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "LodOverride": null,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Materials": {
+          "indexed": {
+            "0": "materials/generic/granite_simple.vmat"
+          }
+        },
+        "Model": "models/dev/sphere.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Bullet",
+        "__guid": "ba6d3269-de0d-4d55-bdd1-f23ef765bffd",
+        "__enabled": true,
+        "Flags": 0,
+        "Lifetime": 1.5,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Speed": 400
+      },
+      {
+        "__type": "Sandbox.TrailRenderer",
+        "__guid": "f9363cd6-59f3-43b9-913c-e8ffd332f21a",
+        "__enabled": true,
+        "Flags": 0,
+        "BlendMode": "Normal",
+        "CastShadows": false,
+        "Color": {
+          "blend": "Linear",
+          "color": [
+            {
+              "t": 0,
+              "c": "0.95349,0.56832,0.09757,1"
+            },
+            {
+              "t": 0.47689074,
+              "c": "0.97462,0.36909,0.20393,1"
+            },
+            {
+              "t": 1,
+              "c": "0.98605,0.26142,0.26142,1"
+            }
+          ],
+          "alpha": [
+            {
+              "t": 0,
+              "a": 0
+            },
+            {
+              "t": 0.60504204,
+              "a": 0.98173517
+            },
+            {
+              "t": 1,
+              "a": 0.9577465
+            }
+          ]
+        },
+        "Emitting": true,
+        "Face": "Camera",
+        "LifeTime": 0.2,
+        "MaxPoints": 64,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Opaque": true,
+        "PointDistance": 8,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "Texturing": {
+          "Texture": null,
+          "Material": null,
+          "WorldSpace": true,
+          "UnitsPerTexture": 10,
+          "Scale": 1,
+          "Offset": 0,
+          "Scroll": 0,
+          "FilterMode": "Anisotropic",
+          "TextureAddressMode": "Wrap",
+          "Clamp": false
+        },
+        "Width": {
+          "rangex": "0.200000003,0.982812583",
+          "rangey": "0.0722222328,0.458333343",
+          "frames": [
+            {
+              "x": 0,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1.0019959,
+              "y": 1,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ]
+        },
+        "Wireframe": false
+      }
+    ],
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [
+    "facepunch.granite_simple#85416"
+  ],
+  "__version": 2
+}

@@ -1123,7 +1123,38 @@
       "__version": 2,
       "__Prefab": "2d player simple.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [],
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "1f0ab43b-649c-4343-8594-5bc25c6fc999"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "dbf37f75-cc9d-4154-a27f-fba12bbc1b96"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "925cf25c-355c-409a-9cbd-4772df9ffa69"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "BulletShooter",
+              "__guid": "1f0ab43b-649c-4343-8594-5bc25c6fc999",
+              "__enabled": true,
+              "Flags": 0,
+              "BulletPrefab": "bullet.prefab",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "SpawnDistance": 20
+            }
+          }
+        ],
         "RemovedObjects": [],
         "PropertyOverrides": [
           {
@@ -1185,7 +1216,7 @@
       "__guid": "7cd2da9e-4cd3-4fbf-8424-2fd68c37ac11",
       "__version": 2,
       "Flags": 0,
-      "Name": "Player Controller",
+      "Name": "Zombie Controller",
       "Position": "0,0,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
@@ -1478,7 +1509,14 @@
                 }
               }
             ],
-            "RemovedObjects": [],
+            "RemovedObjects": [
+              {
+                "Id": {
+                  "Type": "Component",
+                  "IdValue": "96b9b5ff-0671-41de-9890-118b36fc6b28"
+                }
+              }
+            ],
             "PropertyOverrides": [
               {
                 "Target": {
@@ -1568,7 +1606,24 @@
                 "Value": []
               }
             ],
-            "MovedObjects": []
+            "MovedObjects": [
+              {
+                "Id": {
+                  "Type": "Component",
+                  "IdValue": "f0b1d51c-8338-4e5b-8d8a-f366128a85a2"
+                },
+                "NewParent": {
+                  "Type": "GameObject",
+                  "IdValue": "cc6ca6dc-26ea-4bf6-8236-01853ee3e434"
+                },
+                "NewContainerProperty": "Components",
+                "IsNewContainerArray": true,
+                "NewPreviousElement": {
+                  "Type": "Component",
+                  "IdValue": "c5366d21-87f9-4261-9859-e1eb3aff2861"
+                }
+              }
+            ]
           },
           "__PrefabIdToInstanceId": {
             "cc6ca6dc-26ea-4bf6-8236-01853ee3e434": "1a5adb0e-879e-4868-919d-52a5182448df",
