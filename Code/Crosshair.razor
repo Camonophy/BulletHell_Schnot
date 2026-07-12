@@ -79,7 +79,7 @@
 	
 		var localPos = Panel.ScreenPositionToPanelPosition( Mouse.Position ) * correction;
 	
-		Log.Info( $"Screen: {Mouse.Position}, Panel: {localPos}, ScreenSize: {Screen.Size}, Correction: {correction}" );
+		// Log.Info( $"Screen: {Mouse.Position}, Panel: {localPos}, ScreenSize: {Screen.Size}, Correction: {correction}" );
 	
 		CrosshairImage.Style.Left = Length.Pixels( localPos.x - 36 );
 		CrosshairImage.Style.Top = Length.Pixels( localPos.y - 36 );
