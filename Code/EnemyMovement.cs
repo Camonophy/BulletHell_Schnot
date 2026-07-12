@@ -9,17 +9,18 @@ public sealed class EnemyMovement : Component
 	[Property] public SkinnedModelRenderer Renderer { get; set; }
 
 	[Property] public float MoveSpeed { get; set; } = 100f;
-
-	// Wie lange sich der Gegner jeweils bewegt bzw. stehen bleibt (in Sekunden)
+	public float RotationSpeed { get; set; } = 2f;
 	[Property] public float MoveDuration { get; set; } = 2f;
 	[Property] public float IdleDuration { get; set; } = 1.5f;
 
-	private bool isMoving = true;
+	private bool isMoving = false;
 	private TimeSince timeSinceStateChange = 0;
 
 	protected override void OnStart()
 	{
-		Renderer?.PlaybackRate = MoveSpeed / 20;
+		Renderer?.Set( "Walk", isMoving );
+		Renderer?.PlaybackRate = MoveSpeed/20;
+		RotationSpeed = MoveSpeed/20;
 	}
 
 	protected override void OnFixedUpdate()
@@ -40,13 +41,17 @@ public sealed class EnemyMovement : Component
 
 		if ( isMoving )
 		{
-			var direction = ( Target.WorldPosition - WorldPosition ).WithZ( 0 ).Normal;
-			Controller.WishVelocity = direction * MoveSpeed;
+			var directionToTarget = ( Target.WorldPosition - WorldPosition ).WithZ( 0 ).Normal;
 
-			if ( direction.Length > 0.01f )
+			if ( directionToTarget.Length > 0.01f )
 			{
-				WorldRotation = Rotation.LookAt( direction, Vector3.Up );
+				var desiredRotation = Rotation.LookAt( directionToTarget, Vector3.Up );
+
+				// Nicht sofort drehen, sondern langsam annähern
+				WorldRotation = Rotation.Slerp( WorldRotation, desiredRotation, Time.Delta * RotationSpeed );
 			}
+
+			Controller.WishVelocity = WorldRotation.Forward * MoveSpeed;
 		}
 		else
 		{
