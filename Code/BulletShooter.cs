@@ -4,7 +4,7 @@ public sealed class BulletShooter : Component
 {
 	[Property] public PrefabFile BulletPrefab { get; set; }
 
-	[Property] public float SpawnDistance { get; set; } = 20f;
+	[Property] public float SpawnDistance { get; set; } = 5f;
 
 	protected override void OnUpdate()
 	{

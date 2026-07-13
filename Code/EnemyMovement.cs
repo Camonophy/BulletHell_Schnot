@@ -8,7 +8,7 @@ public sealed class EnemyMovement : Component
 
 	[Property] public SkinnedModelRenderer Renderer { get; set; }
 
-	[Property] public float MoveSpeed { get; set; } = 100f;
+	[Property] public float MoveSpeed { get; set; }
 	public float RotationSpeed { get; set; } = 2f;
 	[Property] public float MoveDuration { get; set; } = 2f;
 	[Property] public float IdleDuration { get; set; } = 1.5f;
@@ -28,7 +28,8 @@ public sealed class EnemyMovement : Component
 		if ( Target == null || Controller == null )
 			return;
 
-		// Prüfen, ob der aktuelle Zustand (Bewegen/Stehen) abgelaufen ist
+		Renderer?.GameObject.LocalPosition = Vector3.Zero;
+
 		float currentDuration = isMoving ? MoveDuration : IdleDuration;
 
 		if ( timeSinceStateChange > currentDuration )
@@ -47,7 +48,6 @@ public sealed class EnemyMovement : Component
 			{
 				var desiredRotation = Rotation.LookAt( directionToTarget, Vector3.Up );
 
-				// Nicht sofort drehen, sondern langsam annähern
 				WorldRotation = Rotation.Slerp( WorldRotation, desiredRotation, Time.Delta * RotationSpeed );
 			}
 

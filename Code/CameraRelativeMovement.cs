@@ -9,8 +9,6 @@ public sealed class CameraRelativeMovement : Component
 	{
 		var input = Input.AnalogMove;
 
-		// Kamera-Rotation, aber nur die Y-Achse (Blickwinkel von oben),
-		// damit wir nicht versehentlich "nach unten in den Boden" gucken
 		var camRotation = Rotation.FromYaw( Camera.WorldRotation.Yaw() );
 
 		var wishDirection = camRotation * input;
