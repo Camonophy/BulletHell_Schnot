@@ -1678,7 +1678,6 @@
   "Description": null,
   "__references": [
     "subzerostudios.ground047#147332",
-    "viper.viperplycontroller#72221",
     "xaoc1234.zombieclassic#225248"
   ],
   "__version": 3

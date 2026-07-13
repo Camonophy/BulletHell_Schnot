@@ -72,35 +72,27 @@
           "color": [
             {
               "t": 0,
-              "c": "0.95349,0.56832,0.09757,1"
-            },
-            {
-              "t": 0.47689074,
-              "c": "0.97462,0.36909,0.20393,1"
+              "c": "1,0.98302,0.66047,1"
             },
             {
               "t": 1,
-              "c": "0.98605,0.26142,0.26142,1"
+              "c": "0,0,0,1"
             }
           ],
           "alpha": [
             {
-              "t": 0,
-              "a": 0
-            },
-            {
-              "t": 0.60504204,
-              "a": 0.98173517
+              "t": 0.4117647,
+              "a": 1
             },
             {
               "t": 1,
-              "a": 0.9577465
+              "a": 0
             }
           ]
         },
         "Emitting": true,
         "Face": "Camera",
-        "LifeTime": 0.2,
+        "LifeTime": 1,
         "MaxPoints": 64,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -128,26 +120,22 @@
           "TextureAddressMode": "Wrap",
           "Clamp": false
         },
-        "Width": {
-          "rangex": "0.200000003,0.982812583",
-          "rangey": "0.0722222328,0.458333343",
-          "frames": [
-            {
-              "x": 0,
-              "y": 0,
-              "in": 0,
-              "out": 0,
-              "mode": "Mirrored"
-            },
-            {
-              "x": 1.0019959,
-              "y": 1,
-              "in": 0,
-              "out": 0,
-              "mode": "Mirrored"
-            }
-          ]
-        },
+        "Width": [
+          {
+            "x": 0,
+            "y": 1,
+            "in": -0,
+            "out": -0,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "in": -0,
+            "out": -0,
+            "mode": "Mirrored"
+          }
+        ],
         "Wireframe": false
       }
     ],
