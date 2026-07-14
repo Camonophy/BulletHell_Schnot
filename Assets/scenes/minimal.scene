@@ -178,7 +178,7 @@
               "FollowSpeed": 5,
               "Height": 200,
               "MaxMouseOffset": 200,
-              "MinMouseOffset": 35,
+              "MinMouseOffset": 30,
               "MouseOffsetStrength": 0.5,
               "Offset": -100,
               "OnComponentDestroy": null,
@@ -314,7 +314,7 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "VisibilityMode": "Hidden"
+              "VisibilityMode": "Visible"
             }
           }
         ],
