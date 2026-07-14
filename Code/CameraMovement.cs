@@ -40,17 +40,17 @@ public sealed class CameraMovement : Component
         if (hit.HasValue)
 		{
 			var diff = (hit.Value - Target.WorldPosition).WithZ(0);
-
+        
 			// Auf die maximale/minimale begrenzen, bevor wir die Stärke anwenden
 			if (diff.Length > MaxMouseOffset)
 			{
 				diff = diff.Normal * MaxMouseOffset;
-
+        
 			} else if (diff.Length < MinMouseOffset)
             {
                 diff = diff.Normal;
             }
-
+        
 			mouseOffset = diff * MouseOffsetStrength;
 		}
 

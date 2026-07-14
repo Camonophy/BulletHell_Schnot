@@ -47,6 +47,6 @@ public sealed class ZombieSpawner : Component
 		zombie.WorldPosition = new Vector3( spawnPos.x, spawnPos.y, Player.WorldPosition.z );
 
 		var enemyMovement = zombie.Components.Get<EnemyMovement>(FindMode.EnabledInSelfAndDescendants);
-		enemyMovement?.Target = Player;
+		enemyMovement?.Target = Player; // ???? Woher weiss er hier, welches GameObjekt genau der Player ist, wenn ich doch eigentlich an dieser Stelle noch nicht von diesem weiss.
 	}
 }

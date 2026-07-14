@@ -294,7 +294,7 @@
                   "go": "261949b0-4d65-4aeb-a495-9598b9a3d2ad",
                   "component_type": "PlayerController"
                 },
-                "IdleDuration": 0,
+                "IdleDuration": 1.5,
                 "MoveDuration": 8.5,
                 "MoveSpeed": 40,
                 "OnComponentDestroy": null,

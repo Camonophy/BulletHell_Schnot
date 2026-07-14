@@ -314,7 +314,7 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "VisibilityMode": "Visible"
+              "VisibilityMode": "Hidden"
             }
           }
         ],
@@ -382,7 +382,7 @@
         "271f983d-1be0-4105-b946-b126ef3bf098": "b0506e31-8aae-4e5a-b7e1-81ebdbc85bd3",
         "19991b73-057c-4329-94ba-4140d2fde11a": "2c3904cb-5c14-4e5a-a840-8a2dd0290db7",
         "4e5c7268-1acb-4f32-aa45-057787c86a71": "edb10efa-bf35-4670-8a19-a28b1291454b",
-        "edc5880d-09bc-4d32-928f-d7b8a5c4a05b": "b64d1672-0355-8c7e-a4dd-2c37d6819ef2",
+        "eb9afade-5269-44fa-adc4-4febeb9946af": "2c84f086-c7b2-8b88-9836-aba3a62e16a2",
         "925cf25c-355c-409a-9cbd-4772df9ffa69": "bbcde23c-7f43-4713-beb9-54f497edc22e",
         "f4466195-f61a-4311-a2c0-12458ddd6b5c": "e06d6648-ac05-478c-962b-c69a2636b5a8",
         "51c70275-5a4b-4f94-83d2-3bf0f2095cf6": "f4cec45f-a827-45bd-892b-a4ab5c64f6f0",

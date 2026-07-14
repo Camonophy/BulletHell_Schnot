@@ -1,7 +1,5 @@
 using Sandbox;
 
-using Sandbox;
-
 public sealed class BulletHit : Component, Component.ICollisionListener
 {
     public void OnCollisionStart( Collision collision )
