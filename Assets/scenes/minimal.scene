@@ -180,7 +180,7 @@
               "MaxMouseOffset": 200,
               "MinMouseOffset": 35,
               "MouseOffsetStrength": 0.5,
-              "Offset": -50,
+              "Offset": -100,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -217,7 +217,7 @@
               "IdValue": "41642cd4-5914-4016-bcb8-6233913b46dc"
             },
             "Property": "Rotation",
-            "Value": "0,0.60876143,0,0.793353319"
+            "Value": "0,0.537299633,0,0.843391418"
           },
           {
             "Target": {
@@ -287,9 +287,45 @@
               "OnComponentUpdate": null,
               "SpawnDistance": 20
             }
+          },
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "11951e05-f2a0-410f-8b0e-6f0f4705bd57"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "dbf37f75-cc9d-4154-a27f-fba12bbc1b96"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "1f0ab43b-649c-4343-8594-5bc25c6fc999"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "TopDownAim",
+              "__guid": "11951e05-f2a0-410f-8b0e-6f0f4705bd57",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "VisibilityMode": "Visible"
+            }
           }
         ],
-        "RemovedObjects": [],
+        "RemovedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "d9c3256f-6f66-4182-820e-1637562e2b6e"
+            }
+          }
+        ],
         "PropertyOverrides": [
           {
             "Target": {
@@ -319,7 +355,24 @@
             }
           }
         ],
-        "MovedObjects": []
+        "MovedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "925cf25c-355c-409a-9cbd-4772df9ffa69"
+            },
+            "NewParent": {
+              "Type": "GameObject",
+              "IdValue": "dbf37f75-cc9d-4154-a27f-fba12bbc1b96"
+            },
+            "NewContainerProperty": "Components",
+            "IsNewContainerArray": true,
+            "NewPreviousElement": {
+              "Type": "Component",
+              "IdValue": "4e5c7268-1acb-4f32-aa45-057787c86a71"
+            }
+          }
+        ]
       },
       "__PrefabIdToInstanceId": {
         "dbf37f75-cc9d-4154-a27f-fba12bbc1b96": "d45ecbba-4162-4287-be51-cd5d4ce2be30",
@@ -329,7 +382,7 @@
         "271f983d-1be0-4105-b946-b126ef3bf098": "b0506e31-8aae-4e5a-b7e1-81ebdbc85bd3",
         "19991b73-057c-4329-94ba-4140d2fde11a": "2c3904cb-5c14-4e5a-a840-8a2dd0290db7",
         "4e5c7268-1acb-4f32-aa45-057787c86a71": "edb10efa-bf35-4670-8a19-a28b1291454b",
-        "d9c3256f-6f66-4182-820e-1637562e2b6e": "cb4f0e6f-625d-4b9f-9f58-9896fec712c0",
+        "edc5880d-09bc-4d32-928f-d7b8a5c4a05b": "b64d1672-0355-8c7e-a4dd-2c37d6819ef2",
         "925cf25c-355c-409a-9cbd-4772df9ffa69": "bbcde23c-7f43-4713-beb9-54f497edc22e",
         "f4466195-f61a-4311-a2c0-12458ddd6b5c": "e06d6648-ac05-478c-962b-c69a2636b5a8",
         "51c70275-5a4b-4f94-83d2-3bf0f2095cf6": "f4cec45f-a827-45bd-892b-a4ab5c64f6f0",
@@ -1415,7 +1468,7 @@
         "16f18b8d-1d7c-4af8-b504-df41afa604b1": "078ef42c-116c-4f93-9a4e-8ebffc89b6af",
         "f7d05828-0a5c-4208-9f45-db3eaea7c8b0": "3382bbf9-08c1-42cf-93e9-b9e152939082",
         "716c7ba4-1700-41ac-be08-ff0b7cfe044f": "56926904-32e4-48b2-acd4-cff5780c1f63",
-        "24347e1e-b06b-88a2-aca0-5ed72d83f680": "d1f5c2bb-f553-49fa-9044-8252a38f7aed"
+        "827ea8a7-7736-43b2-8a44-1489a9914d25": "f37f7827-eca6-8a1d-9181-b6bc861dc2d8"
       }
     }
   ],

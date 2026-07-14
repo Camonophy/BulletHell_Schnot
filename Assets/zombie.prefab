@@ -7,7 +7,7 @@
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
-    "Tags": "",
+    "Tags": "enemy,zombie,mob",
     "Enabled": true,
     "NetworkMode": 2,
     "NetworkFlags": 0,
@@ -311,6 +311,34 @@
                 },
                 "Target": null
               }
+            },
+            {
+              "Id": {
+                "Type": "Component",
+                "IdValue": "827ea8a7-7736-43b2-8a44-1489a9914d25"
+              },
+              "Parent": {
+                "Type": "GameObject",
+                "IdValue": "cc6ca6dc-26ea-4bf6-8236-01853ee3e434"
+              },
+              "PreviousElement": {
+                "Type": "Component",
+                "IdValue": "716c7ba4-1700-41ac-be08-ff0b7cfe044f"
+              },
+              "ContainerProperty": "Components",
+              "IsContainerArray": true,
+              "Data": {
+                "__type": "BulletHit",
+                "__guid": "827ea8a7-7736-43b2-8a44-1489a9914d25",
+                "__enabled": true,
+                "Flags": 0,
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null
+              }
             }
           ],
           "RemovedObjects": [
@@ -390,8 +418,8 @@
                 "Type": "Component",
                 "IdValue": "0e1b10af-5ced-451d-8988-46050857754f"
               },
-              "Property": "__enabled",
-              "Value": true
+              "Property": "AllowedAreas",
+              "Value": []
             }
           ],
           "MovedObjects": [
@@ -410,22 +438,6 @@
                 "Type": "Component",
                 "IdValue": "c5366d21-87f9-4261-9859-e1eb3aff2861"
               }
-            },
-            {
-              "Id": {
-                "Type": "Component",
-                "IdValue": "5970e986-69e1-4e9a-94ea-86c5df6b8e83"
-              },
-              "NewParent": {
-                "Type": "GameObject",
-                "IdValue": "cc6ca6dc-26ea-4bf6-8236-01853ee3e434"
-              },
-              "NewContainerProperty": "Components",
-              "IsNewContainerArray": true,
-              "NewPreviousElement": {
-                "Type": "Component",
-                "IdValue": "716c7ba4-1700-41ac-be08-ff0b7cfe044f"
-              }
             }
           ]
         },
@@ -437,8 +449,7 @@
           "e1521e51-f978-4388-9b1c-a7c97822a116": "4091532c-e972-4496-8523-9052834f0f34",
           "2119ceac-eadf-404a-9cd9-cdba4cf21845": "fcde567b-c6dd-424c-89c1-3e0c1454a506",
           "38af8d07-2e82-4353-91ac-d6eb86a2b262": "16f18b8d-1d7c-4af8-b504-df41afa604b1",
-          "0e1b10af-5ced-451d-8988-46050857754f": "f7d05828-0a5c-4208-9f45-db3eaea7c8b0",
-          "5970e986-69e1-4e9a-94ea-86c5df6b8e83": "24347e1e-b06b-88a2-aca0-5ed72d83f680"
+          "0e1b10af-5ced-451d-8988-46050857754f": "f7d05828-0a5c-4208-9f45-db3eaea7c8b0"
         }
       }
     ],

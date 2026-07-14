@@ -51,7 +51,7 @@
         "__guid": "ba6d3269-de0d-4d55-bdd1-f23ef765bffd",
         "__enabled": true,
         "Flags": 0,
-        "Lifetime": 1.5,
+        "Lifetime": 1,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -159,7 +159,7 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "RollingResistance": null,
-        "Scale": "50,50,50",
+        "Scale": "70,70,70",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"

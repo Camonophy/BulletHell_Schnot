@@ -1,12 +1,25 @@
 using Sandbox;
 
-public sealed class TodDownAim : Component
+public sealed class TopDownAim : Component
 {
 
+	//Custom Enum, weil MouseVisibility noch buggy ist und nicht automatisch ein DropDown Menü im Editor erzeugt.
+	public enum CursorVisibility
+	{
+		Auto,
+		Hidden,
+		Visible
+	}
+	[Property] public CursorVisibility VisibilityMode { get; set; } = CursorVisibility.Auto;
 	private Plane plane;
 	protected override void OnStart()
 	{
-		Mouse.Visible = true;
+		Mouse.Visibility = VisibilityMode switch
+		{
+			CursorVisibility.Hidden => MouseVisibility.Hidden,
+			CursorVisibility.Visible => MouseVisibility.Visible,
+			_ => MouseVisibility.Auto
+		};
 		plane = new Plane( WorldPosition, Vector3.Up );
 	}
 

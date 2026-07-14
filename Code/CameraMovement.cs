@@ -55,10 +55,10 @@ public sealed class CameraMovement : Component
 		}
 
         Vector3 targetPosition =
-			Target.Transform.Position + mouseOffset + Vector3.Up*Height - Vector3.Backward*Offset;
+			Target.WorldPosition + mouseOffset + Vector3.Up*Height - Vector3.Backward*Offset;
 
-        Transform.Position = Vector3.Lerp(
-            Transform.Position,
+        WorldPosition = Vector3.Lerp(
+            WorldPosition,
             targetPosition,
             Time.Delta * FollowSpeed
         );
