@@ -1,0 +1,29 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="Enemy:">
+		<p>Enemy X: @Enemy.WorldPosition.x</p>
+		<p>Enemy Y: @Enemy.WorldPosition.y</p>
+		<p>Enemy Z: @Enemy.WorldPosition.z</p>
+	</div>
+	<div class="Wall:">
+		<p>Wall X: @Wall.WorldPosition.x</p>
+		<p>Wall Y: @Wall.WorldPosition.y</p>
+		<p>Wall Z: @Wall.WorldPosition.z</p>
+	</div>
+</root>
+
+@code
+{
+	
+	[Property] Component Enemy { get; set; }
+	[Property] Component Wall { get; set; }
+	
+	protected override int BuildHash()
+	{
+		return System.HashCode.Combine( Enemy.WorldPosition );
+	}
+}
