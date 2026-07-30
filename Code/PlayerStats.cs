@@ -25,6 +25,11 @@ public sealed class PlayerStats : Component
 	{
 		Score += amount;
 	}
+
+	public int GetScore()
+	{
+		return Score;
+	}
 	protected override void OnUpdate()
 	{
 
