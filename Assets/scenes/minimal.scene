@@ -300,6 +300,14 @@
               "Type": "Component",
               "IdValue": "77c5d3a7-8c95-45d4-881d-18f1c9a119ad"
             },
+            "Property": "Armor",
+            "Value": 50
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "77c5d3a7-8c95-45d4-881d-18f1c9a119ad"
+            },
             "Property": "Health",
             "Value": 100
           },
@@ -1347,20 +1355,7 @@
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
       "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "SimpleScore",
-          "__guid": "7d5089d9-baba-46d2-b9be-347eefc0d1dd",
-          "__enabled": true,
-          "Flags": 0,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null
-        }
-      ],
+      "Components": [],
       "Children": []
     },
     {

@@ -5,9 +5,22 @@
 
 <root>
 	<div class="vitals">
-		<p>❤️ @Health</p>
 		<p>⏰ @GetTimeString()</p>
 		<p>⭐ @Score</p>
+	</div>
+
+	<div class="healthbars">
+		<div class="healthbar">
+			<div class="inner">
+				<div class="fill" style="width: @(Health/MaxHealth*100f)%"></div>
+			</div>
+		</div>
+
+		<div class="healthbar armor">
+			<div class="inner">
+				<div class="fill" @ref="ArmorFill"></div>
+			</div>
+		</div>
 	</div>
 </root>
 
@@ -33,35 +46,100 @@
 			color: white;
 			flex-direction: column;
 		}
+
+		> .healthbars
+		{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			flex-direction: column;
+			padding: 8px;
+
+			> .healthbar
+			{
+				width: 500px;
+				height: 64px;
+				background-color: rgb(48, 46, 46);
+				padding: 8px;
+
+				> .inner
+				{
+					background-color: black;
+					flex-grow: 1;
+
+					> .fill
+					{
+						height: 100%;
+						background-color: rgb(185, 53, 35);
+
+					}
+				}
+
+				&.armor
+				{
+					height: 32px;
+					> .inner
+					{
+						> .fill
+						{
+							background-color: rgb(212, 149, 54);
+						}
+					}
+				}
+			}
+
+		}
 	}
 </style>
 
 @code
 {
-	[Property] PlayerController Player { get; set; }
+    [Property] PlayerController Player { get; set; }
 
-	private PlayerStats Stats =>
-		Player?.Components.Get<PlayerStats>();
+    Panel ArmorFill {get; set; }
 
-	private int Health =>
-		Stats?.Health ?? 0;
-	
-	private int Score =>
-		Stats?.GetScore() ?? 0;
+    private PlayerStats Stats =>
+        Player?.Components.Get<PlayerStats>();
 
-	private TimeSince TimeAlive =>
-		Stats?.TimeAlive ?? 0;
+    private float Health =>
+        Stats?.Health ?? 0f;
+    private float MaxHealth =>
+        Stats?.MaxHealth ?? 0f;
 
-	string GetTimeString()
+    private float Armor =>
+        Stats?.Armor ?? 0f;
+
+    private float MaxArmor =>
+        Stats?.MaxArmor ?? 0f;
+
+    private int Score =>
+        Stats?.GetScore() ?? 0;
+
+    private TimeSince TimeAlive =>
+        Stats?.TimeAlive ?? 0;
+
+    string GetTimeString()
+    {
+        var time = TimeAlive;
+        var minutes = (int) time / 60;
+        var seconds = (int) time % 60;
+        return $"{minutes:00}:{seconds:00}";
+    }
+
+    protected override void OnUpdate()
 	{
-		var time = TimeAlive;
-		var minutes = (int) time / 60;
-		var seconds = (int) time % 60;
-		return $"{minutes:00}:{seconds:00}";
-	}
+		base.OnUpdate();
+
+		if (ArmorFill == null)
+		{
+			return;
+		}
+		ArmorFill.Style.Width = Length.Percent(Armor/MaxArmor*100f);
+
+    }
 
 	protected override int BuildHash()
 	{
-		return System.HashCode.Combine( Health, GetTimeString(), Score );
+		return System.HashCode.Combine(GetTimeString(), Score );
 	}
 }
