@@ -11,16 +11,7 @@ public sealed class PlayerStats : Component
 	
 	private static int Score { get; set; } = 0;
 	public TimeSince TimeAlive {get; set; } = 0f;
-
-
-	[Property] List<string> Inventory { get; set; } = new List<string>
-	{
-		"weapon_pistol"
-	};
-
-	public int ActiveInventorySlots = 0;
-
-	public int MaxInventorySlots = 9;
+	
 	public static void AddScore (int amount)
 	{
 		Score += amount;

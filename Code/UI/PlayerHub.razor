@@ -24,6 +24,15 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="hotbar">
+		@for(int i=0; i<Slots; i++)
+		{
+			<div class="slot @((ActiveSlot == i) ? "active" : "")">
+
+			</div>
+		}
+	</div>
 </root>
 
 <style>
@@ -102,6 +111,33 @@
 			}
 
 		}
+
+		> .hotbar
+		{
+			position: absolute;
+			bottom: 32px;
+			width: 100%;
+			z-index: 1;
+			gap: 8px;
+			justify-content: center;
+			align-items: flex-end;
+
+			> .slot
+			{
+				width: 92px;
+				height: 92px;
+				background-color: rgba(39, 42, 49, 0.63);
+				border-radius: 16px;
+				transition: all 0.1s ease;
+
+				&.active
+				{
+					background-color: rgba(247, 245, 255, 0.808);
+					width: 108px;
+					height: 108px;
+				}
+			}
+		}
 	}
 </style>
 
@@ -110,6 +146,15 @@
     [Property] PlayerController Player { get; set; }
 
     Panel ArmorFill {get; set; }
+
+	private Inventory Inventory =>
+        Player?.Components.Get<Inventory>();
+
+	private int Slots =>
+		Inventory?.MaxInventorySlots ?? 0;
+
+	private int ActiveSlot =>
+		Inventory?.ActiveInventorySlot ?? 0;
 
     private PlayerStats Stats =>
         Player?.Components.Get<PlayerStats>();
@@ -148,11 +193,10 @@
 			return;
 		}
 		ArmorFill.Style.Width = Length.Percent(Armor/MaxArmor*100f);
-
     }
 
 	protected override int BuildHash()
 	{
-		return System.HashCode.Combine(GetTimeString(), Score );
+		return System.HashCode.Combine(GetTimeString(), Score, ActiveSlot );
 	}
 }

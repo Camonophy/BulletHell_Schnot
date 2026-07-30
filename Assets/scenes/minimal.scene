@@ -257,8 +257,44 @@
       "__version": 2,
       "__Prefab": "2d player simple.prefab",
       "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
+        "AddedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "12443eac-461f-4c85-b90c-383323f4b61b"
+            },
+            "Parent": {
+              "Type": "GameObject",
+              "IdValue": "dbf37f75-cc9d-4154-a27f-fba12bbc1b96"
+            },
+            "PreviousElement": {
+              "Type": "Component",
+              "IdValue": "77c5d3a7-8c95-45d4-881d-18f1c9a119ad"
+            },
+            "ContainerProperty": "Components",
+            "IsContainerArray": true,
+            "Data": {
+              "__type": "Inventory",
+              "__guid": "12443eac-461f-4c85-b90c-383323f4b61b",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          }
+        ],
+        "RemovedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "8dc32341-0edf-466a-a200-b76cb29fe34b"
+            }
+          }
+        ],
         "PropertyOverrides": [
           {
             "Target": {
@@ -1425,27 +1461,114 @@
           "ScaleStrategy": "ConsistentHeight",
           "TargetCamera": null,
           "ZIndex": 100
-        },
-        {
-          "__type": "Sandbox.PlayerHub",
-          "__guid": "d61b97e9-f990-4e01-8696-d581d55b4d8b",
-          "__enabled": true,
-          "Flags": 0,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Player": {
-            "_type": "component",
-            "component_id": "0b3b105b-8acc-4c33-9366-d90de9ca0150",
-            "go": "d45ecbba-4162-4287-be51-cd5d4ce2be30",
-            "component_type": "PlayerController"
-          }
         }
       ],
-      "Children": []
+      "Children": [
+        {
+          "__guid": "cf847172-523f-4dea-bfba-f9d92daa821a",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Main Hud",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "c58f1841-a914-4613-837c-235919dd1dec",
+              "__enabled": true,
+              "Flags": 0,
+              "AutoScreenScale": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "TargetCamera": null,
+              "ZIndex": 100
+            },
+            {
+              "__type": "Sandbox.PlayerHub",
+              "__guid": "45a69ab7-7730-4ff9-95db-c243a82b50a6",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Player": {
+                "_type": "component",
+                "component_id": "0b3b105b-8acc-4c33-9366-d90de9ca0150",
+                "go": "d45ecbba-4162-4287-be51-cd5d4ce2be30",
+                "component_type": "PlayerController"
+              }
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "e4beb6b2-b963-4101-a36d-8a56d7d131da",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Pause Menu",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "69be7855-7af9-4b95-8510-8ebc592a1ef8",
+              "__enabled": true,
+              "Flags": 0,
+              "AutoScreenScale": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "TargetCamera": null,
+              "ZIndex": 120
+            },
+            {
+              "__type": "Sandbox.PauseMenu",
+              "__guid": "ab64ed29-7f17-4da2-8429-6ef39d681802",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {

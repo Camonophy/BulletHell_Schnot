@@ -1,0 +1,112 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root class="@(IsPaused ? "" : "hide")">
+	<h2>PAUSED</h2>
+	<div class="options">
+		<div class="button" onclick=@OnResume>
+			Resume
+		</div>
+
+		<div class="button sfx">
+			Play Sound
+		</div>
+	</div>
+</root>
+
+<style>
+	PauseMenu
+	{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		background-color: rgb(44, 40, 40, 0.9);
+		pointer-events: all;
+		color: aliceblue;
+		font-family: Poppins;
+		font-size: 64px;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transition: opacity 0.3s ease;
+
+		> h2
+		{
+			font-size: 128px;
+			font-weight: bolder;
+		}
+
+		> .options
+		{
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+
+			> .button
+			{
+				padding: 8px;
+				padding-left: 32px;
+				padding-right: 32px;
+				border-radius: 32px;
+				transition: all 0.1s ease;
+
+				&:hover
+				{
+					background-color: rgba(192, 188, 188, 0.384);
+					transform: scale(1.1);
+					sound-in: ui.button.over;
+				}
+
+				&:active
+				{
+					sound-in: ui.button.press;
+				}
+
+				&.sfx
+				{
+					&:active
+					{
+						sound-in: ui.downvote;
+					}
+				}
+			}
+		}
+
+		&.hide
+		{
+			opacity: 0;
+		}
+	}
+</style>
+
+@code
+{
+	public bool IsPaused { get; set; }
+
+	void OnResume()
+	{
+		IsPaused = false;
+	}
+
+	void OnPlaySound()
+	{
+		
+	}
+
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		if(Input.EscapePressed)
+		{
+			IsPaused = !IsPaused;
+		}
+
+		Scene.TimeScale = IsPaused ? 0 : 1;
+	}
+    protected override int BuildHash() => System.HashCode.Combine(IsPaused);
+}
