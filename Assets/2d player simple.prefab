@@ -195,26 +195,11 @@
         "WorkshopItems": []
       },
       {
-        "__type": "TodDownAim",
-        "__guid": "d9c3256f-6f66-4182-820e-1637562e2b6e",
-        "__enabled": true,
-        "Flags": 0,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null
-      },
-      {
         "__type": "CameraRelativeMovement",
         "__guid": "925cf25c-355c-409a-9cbd-4772df9ffa69",
         "__enabled": true,
         "Flags": 0,
-        "Camera": {
-          "_type": "gameobject",
-          "go": "42196b3a-d959-45ff-a43a-083c3392e5fb"
-        },
+        "Camera": null,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -227,6 +212,49 @@
           "go": "dbf37f75-cc9d-4154-a27f-fba12bbc1b96",
           "component_type": "PlayerController"
         }
+      },
+      {
+        "__type": "BulletShooter",
+        "__guid": "76822f9c-3574-4a0c-81ec-1f3dd0cf69ce",
+        "__enabled": true,
+        "Flags": 0,
+        "BulletPrefab": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "SpawnDistance": 5
+      },
+      {
+        "__type": "TopDownAim",
+        "__guid": "1789e194-f963-43ed-a8da-1c38d80f232d",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "VisibilityMode": "Visible"
+      },
+      {
+        "__type": "PlayerStats",
+        "__guid": "77c5d3a7-8c95-45d4-881d-18f1c9a119ad",
+        "__enabled": true,
+        "Flags": 0,
+        "Armor": 0,
+        "Health": 0,
+        "MaxArmor": 100,
+        "MaxHealth": 100,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [
@@ -366,7 +394,28 @@
         ],
         "Children": []
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,

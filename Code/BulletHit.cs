@@ -8,7 +8,7 @@ public sealed class BulletHit : Component, Component.ITriggerListener
 
         if (other.Tags.Has( "mob" ) )
         {
-            SimpleScore.AddScore(1);
+            PlayerStats.AddScore(1);
 
             other.GameObject.Parent?.Destroy();
             other.GameObject.Destroy();
