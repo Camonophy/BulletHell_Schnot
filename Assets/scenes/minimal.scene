@@ -180,7 +180,7 @@
               "MaxMouseOffset": 200,
               "MinMouseOffset": 30,
               "MouseOffsetStrength": 0.5,
-              "Offset": -100,
+              "Offset": 100,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -217,7 +217,7 @@
               "IdValue": "41642cd4-5914-4016-bcb8-6233913b46dc"
             },
             "Property": "Rotation",
-            "Value": "0,0.537299633,0,0.843391418"
+            "Value": "-0.379928201,0.379928201,0.596367776,0.596367776"
           },
           {
             "Target": {
@@ -301,8 +301,8 @@
               "Type": "GameObject",
               "IdValue": "dbf37f75-cc9d-4154-a27f-fba12bbc1b96"
             },
-            "Property": "Position",
-            "Value": "-183.613144,0,0"
+            "Property": "Rotation",
+            "Value": "0,0,0.707106829,0.707106769"
           },
           {
             "Target": {
@@ -456,7 +456,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Plane (-1, 0)",
-          "Position": "2,2000,0",
+          "Position": "0,2000,0",
           "Rotation": "0,0,0,1",
           "Scale": "20,20,5",
           "Tags": "",
@@ -1387,6 +1387,22 @@
         "PropertyOverrides": [
           {
             "Target": {
+              "Type": "GameObject",
+              "IdValue": "261949b0-4d65-4aeb-a495-9598b9a3d2ad"
+            },
+            "Property": "Position",
+            "Value": "0,128,0"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "261949b0-4d65-4aeb-a495-9598b9a3d2ad"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0.707106829,0.707106769"
+          },
+          {
+            "Target": {
               "Type": "Component",
               "IdValue": "4e23f065-1163-428c-b8d4-ffb3834f3d7f"
             },
@@ -1564,6 +1580,61 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "ab1d82d6-ab07-4c04-ad44-15fa5799e52e",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "MiniMap",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "f3393b86-31f8-4f88-8028-f192f6ad86c1",
+              "__enabled": true,
+              "Flags": 0,
+              "AutoScreenScale": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "TargetCamera": null,
+              "ZIndex": 101
+            },
+            {
+              "__type": "Sandbox.MiniMap",
+              "__guid": "4d894aba-c16c-42f3-a10d-d037f6e8f92c",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Player": {
+                "_type": "component",
+                "component_id": "0b3b105b-8acc-4c33-9366-d90de9ca0150",
+                "go": "d45ecbba-4162-4287-be51-cd5d4ce2be30",
+                "component_type": "PlayerController"
+              }
             }
           ],
           "Children": []

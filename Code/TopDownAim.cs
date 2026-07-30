@@ -41,7 +41,9 @@ public sealed class TopDownAim : Component
 
 			if ( direction.Length > 0.01f )
 			{
-				WorldRotation = Rotation.LookAt( direction, Vector3.Up );
+				//Log.Info( $"Mouse Position: {Mouse.Position.x}, {Mouse.Position.y}" );
+				//Log.Info($"Player direction: {direction.x}, {direction.y}");
+				WorldRotation = Rotation.LookAt( direction, Vector3.Up )* Rotation.FromYaw( 90 );
 			}
 		}
 	}

@@ -1,0 +1,113 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="coordinates">
+		<p>X: @Math.Ceiling(PositionX)</p>
+		<p>Y: @Math.Ceiling(PositionY)</p>
+	</div>
+
+	<div class="map">
+		<div class="inner">
+			<div class="fill" ></div>
+
+			<div class="player"
+        		 style="left:@MarkerXpx; top:@MarkerYpx;"></div>
+		</div>
+	</div>
+</root>
+
+<style>
+	MiniMap
+	{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		font-family: Poppins;
+		font-size: 12px;
+
+		> .coordinates
+		{
+			position: absolute;
+			top: 32px;
+			right: 112px;
+			font-size: 32px;
+			font-weight: bold;
+			text-stroke: 3px black;
+			color: white;
+			gap: 16px;
+			flex-direction: row;
+		}
+
+		> .map
+		{
+			position: absolute;
+			width: 197px;
+			height: 197px;
+			top: 112px;
+			right: 64px;
+			background-color: rgb(48, 46, 46);
+			padding: 8px;
+
+			> .inner
+			{
+				position: absolute;
+				background-color: rgba(0, 0, 0, 0.178);
+				flex-grow: 1;
+				
+				> .fill
+				{
+					height: 100%;
+					background-color: rgb(151, 151, 151);
+				}
+
+				> .player
+				{
+				    position: absolute;
+				    width: 8px;
+				    height: 8px;
+				    background: white;
+				    border-radius: 999px;
+				}
+			}
+		}
+	}
+</style>
+
+@code
+{
+    [Property] PlayerController Player { get; set; }
+
+    const float WorldHalfSize = 2048;
+    const float MapSize = 197;
+
+    private float MarkerX =>
+        (((Player?.WorldPosition.x ?? 0) + WorldHalfSize) / (WorldHalfSize * 2)) * MapSize;
+
+	//Richtung umkehren, da sonst oben und unten vertauscht sind. Hat was mit der Art und Weise zu tun, wie das Koordinatensystem für Panele funktioniert.
+    private float MarkerY =>
+        (((-Player?.WorldPosition.y ?? 0) + WorldHalfSize) / (WorldHalfSize * 2)) * MapSize;
+
+    private string MarkerXpx => $"{MarkerX}px";
+    private string MarkerYpx => $"{MarkerY}px";
+
+    private float PositionX =>
+        Player?.WorldPosition.x/10 ?? 0;
+
+    private float PositionY =>
+        Player?.WorldPosition.y/10 ?? 0;
+
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+    }
+    protected override int BuildHash()
+	{
+		return System.HashCode.Combine(PositionX, PositionY, MarkerX, MarkerY);
+	}
+}
