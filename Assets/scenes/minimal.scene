@@ -382,7 +382,7 @@
         "271f983d-1be0-4105-b946-b126ef3bf098": "b0506e31-8aae-4e5a-b7e1-81ebdbc85bd3",
         "19991b73-057c-4329-94ba-4140d2fde11a": "2c3904cb-5c14-4e5a-a840-8a2dd0290db7",
         "4e5c7268-1acb-4f32-aa45-057787c86a71": "edb10efa-bf35-4670-8a19-a28b1291454b",
-        "a5782db1-4102-4c0a-8dfa-ce3e1bbdeeed": "95f4b8ab-ac5f-8527-a628-6c03adcc5598",
+        "825ab697-7903-4ce1-bd82-f8d9174684ed": "f41ad625-d371-8c8e-bc20-d875957d2c8d",
         "925cf25c-355c-409a-9cbd-4772df9ffa69": "bbcde23c-7f43-4713-beb9-54f497edc22e",
         "f4466195-f61a-4311-a2c0-12458ddd6b5c": "e06d6648-ac05-478c-962b-c69a2636b5a8",
         "51c70275-5a4b-4f94-83d2-3bf0f2095cf6": "f4cec45f-a827-45bd-892b-a4ab5c64f6f0",
@@ -1425,14 +1425,7 @@
       "__Prefab": "zombie.prefab",
       "__PrefabInstancePatch": {
         "AddedObjects": [],
-        "RemovedObjects": [
-          {
-            "Id": {
-              "Type": "Component",
-              "IdValue": "110cfca4-20ab-4ffc-abce-ad492a971d72"
-            }
-          }
-        ],
+        "RemovedObjects": [],
         "PropertyOverrides": [
           {
             "Target": {
@@ -1474,9 +1467,58 @@
         "fcde567b-c6dd-424c-89c1-3e0c1454a506": "9c87789a-c6e7-4170-b26f-4ce67df06206",
         "16f18b8d-1d7c-4af8-b504-df41afa604b1": "078ef42c-116c-4f93-9a4e-8ebffc89b6af",
         "f7d05828-0a5c-4208-9f45-db3eaea7c8b0": "3382bbf9-08c1-42cf-93e9-b9e152939082",
-        "716c7ba4-1700-41ac-be08-ff0b7cfe044f": "56926904-32e4-48b2-acd4-cff5780c1f63",
-        "110cfca4-20ab-4ffc-abce-ad492a971d72": "a1b76157-2b40-85fd-a7d5-21949932d6ac"
+        "716c7ba4-1700-41ac-be08-ff0b7cfe044f": "56926904-32e4-48b2-acd4-cff5780c1f63"
       }
+    },
+    {
+      "__guid": "e0e8bb88-0b82-42c7-abe2-553dfaf3113b",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "UI",
+      "Position": "-149.312958,-9.92966843,74.5314941",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "804ccf73-ac34-4052-84dd-d8e44b2ce1cf",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": null,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.PlayerHub",
+          "__guid": "d61b97e9-f990-4e01-8696-d581d55b4d8b",
+          "__enabled": true,
+          "Flags": 0,
+          "MyStringValue": "Hello World!",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {

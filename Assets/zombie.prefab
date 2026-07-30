@@ -7,7 +7,7 @@
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
-    "Tags": "enemy,zombie,mob",
+    "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
     "NetworkFlags": 0,
@@ -187,32 +187,6 @@
         "Radius": 16,
         "StepHeight": 18,
         "UseCollisionRules": false
-      },
-      {
-        "__type": "Sandbox.BoxCollider",
-        "__guid": "110cfca4-20ab-4ffc-abce-ad492a971d72",
-        "__enabled": true,
-        "Flags": 0,
-        "Center": "1.7206192,-0.040222168,32.6498337",
-        "ColliderFlags": 0,
-        "Elasticity": null,
-        "Friction": null,
-        "IsTrigger": true,
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "OnObjectTriggerEnter": null,
-        "OnObjectTriggerExit": null,
-        "OnTriggerEnter": null,
-        "OnTriggerExit": null,
-        "RollingResistance": null,
-        "Scale": "24.0698318,35.4575119,52.0231781",
-        "Static": false,
-        "Surface": null,
-        "SurfaceVelocity": "0,0,0"
       }
     ],
     "Children": [
@@ -366,6 +340,14 @@
             },
             {
               "Target": {
+                "Type": "GameObject",
+                "IdValue": "cc6ca6dc-26ea-4bf6-8236-01853ee3e434"
+              },
+              "Property": "Tags",
+              "Value": "mob,enemy,zombie"
+            },
+            {
+              "Target": {
                 "Type": "Component",
                 "IdValue": "c5366d21-87f9-4261-9859-e1eb3aff2861"
               },
@@ -387,6 +369,14 @@
               },
               "Property": "IsTrigger",
               "Value": true
+            },
+            {
+              "Target": {
+                "Type": "Component",
+                "IdValue": "e1521e51-f978-4388-9b1c-a7c97822a116"
+              },
+              "Property": "__enabled",
+              "Value": false
             },
             {
               "Target": {
