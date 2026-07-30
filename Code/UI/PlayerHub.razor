@@ -1,5 +1,6 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using System;
 @inherits PanelComponent
 @namespace Sandbox
 
@@ -12,7 +13,8 @@
 	<div class="healthbars">
 		<div class="healthbar">
 			<div class="inner">
-				<div class="fill" style="width: @(Health/MaxHealth*100f)%"></div>
+				<div class="fill" style="width: @(Math.Ceiling(Health)/MaxHealth*100f)%"></div>
+				<p>❤️ @Math.Ceiling(Health)</p>
 			</div>
 		</div>
 
@@ -50,10 +52,10 @@
 		> .healthbars
 		{
 			position: absolute;
-			bottom: 0px;
-			left: 0px;
+			bottom: 32px;
+			left: 32px;
 			flex-direction: column;
-			padding: 8px;
+			gap: 8px;
 
 			> .healthbar
 			{
@@ -72,6 +74,17 @@
 						height: 100%;
 						background-color: rgb(185, 53, 35);
 
+					}
+
+					> p
+					{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -100%);
+						color: white;
+						font-size: 24px;
+						font-weight: bold;
 					}
 				}
 

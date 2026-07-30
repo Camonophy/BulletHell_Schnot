@@ -246,7 +246,10 @@
         "__enabled": true,
         "Flags": 0,
         "Armor": 0,
-        "Health": 0,
+        "Health": 100,
+        "Inventory": [
+          "weapon_pistol"
+        ],
         "MaxArmor": 100,
         "MaxHealth": 100,
         "OnComponentDestroy": null,
@@ -255,6 +258,29 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null
+      },
+      {
+        "__type": "Sandbox.BaseInventoryComponent",
+        "__guid": "8dc32341-0edf-466a-a200-b76cb29fe34b",
+        "__enabled": true,
+        "Flags": 0,
+        "AutoSwitchOnEmpty": false,
+        "AutoSwitchOnPickup": true,
+        "Behaviour": "Hotbar",
+        "GiveOnStart": true,
+        "ManualPumping": false,
+        "MaxSlots": 6,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PickupMode": "None",
+        "PickupRadius": 48,
+        "StartingAmmo": [],
+        "StartingItems": [],
+        "UsesLoadout": false
       }
     ],
     "Children": [

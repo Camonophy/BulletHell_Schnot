@@ -302,24 +302,6 @@
             },
             "Property": "Armor",
             "Value": 50
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "77c5d3a7-8c95-45d4-881d-18f1c9a119ad"
-            },
-            "Property": "Health",
-            "Value": 100
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "77c5d3a7-8c95-45d4-881d-18f1c9a119ad"
-            },
-            "Property": "Inventory",
-            "Value": [
-              "weapon_pistol"
-            ]
           }
         ],
         "MovedObjects": []
@@ -340,7 +322,8 @@
         "565eda68-9ab5-4d8a-90d8-d4f2c103d0a7": "865363d4-463b-4f0a-b757-e9f2f91c0fde",
         "76822f9c-3574-4a0c-81ec-1f3dd0cf69ce": "03038a9b-32ed-852a-b4ad-c1b9d461cf39",
         "1789e194-f963-43ed-a8da-1c38d80f232d": "26eda89c-7cdf-856d-a753-bb04f628e4f7",
-        "77c5d3a7-8c95-45d4-881d-18f1c9a119ad": "590483a8-5019-8540-a63b-6c3d60d1207f"
+        "77c5d3a7-8c95-45d4-881d-18f1c9a119ad": "590483a8-5019-8540-a63b-6c3d60d1207f",
+        "8dc32341-0edf-466a-a200-b76cb29fe34b": "0aef6e50-9ca9-81d7-be20-5b661233e09c"
       }
     },
     {
