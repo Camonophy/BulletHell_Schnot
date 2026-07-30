@@ -1,19 +1,29 @@
 using Sandbox;
 
-public sealed class BulletHit : Component, Component.ICollisionListener
+public sealed class BulletHit : Component, Component.ITriggerListener
 {
-    public void OnCollisionStart( Collision collision )
+    public void OnTriggerEnter(Collider other)
     {
-        var other = collision.Other.GameObject;
+        Log.Info($"Trigger: {other.GameObject.Name}");
 
-        if ( !other.Tags.Has( "Bullet" ) )
+        if (other.Tags.Has( "mob" ) )
+        {
+            Log.Info("Objekt war ein mob");
+
+		    Log.Info("1");
+            SimpleScore.AddScore(1);
+
+            Log.Info("2");
+            other.GameObject.Parent?.Destroy();
+
+            Log.Info("3");
+            other.GameObject.Destroy();
+
+            Log.Info("4");
+            this.GameObject.Destroy();
+        } else
+        {
             return;
-
-		SimpleScore.AddScore(1);
-
-        other.Destroy();
-
-		GameObject.Parent?.Destroy();
-        GameObject.Destroy();
+        }
     }
 }

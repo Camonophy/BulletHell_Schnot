@@ -4,7 +4,7 @@
     "__version": 2,
     "Flags": 0,
     "Name": "bullet",
-    "Position": "0,0,0",
+    "Position": "0,0,30",
     "Rotation": "0,0,0,1",
     "Scale": "0.100000001,0.100000001,0.100000001",
     "Tags": "object,bullet",
@@ -147,7 +147,7 @@
         "ColliderFlags": 0,
         "Elasticity": null,
         "Friction": null,
-        "IsTrigger": false,
+        "IsTrigger": true,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -163,6 +163,18 @@
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "BulletHit",
+        "__guid": "1277b5f0-2fa3-47f7-a093-bfc831c2038f",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [],

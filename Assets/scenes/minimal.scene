@@ -382,7 +382,7 @@
         "271f983d-1be0-4105-b946-b126ef3bf098": "b0506e31-8aae-4e5a-b7e1-81ebdbc85bd3",
         "19991b73-057c-4329-94ba-4140d2fde11a": "2c3904cb-5c14-4e5a-a840-8a2dd0290db7",
         "4e5c7268-1acb-4f32-aa45-057787c86a71": "edb10efa-bf35-4670-8a19-a28b1291454b",
-        "eb9afade-5269-44fa-adc4-4febeb9946af": "2c84f086-c7b2-8b88-9836-aba3a62e16a2",
+        "a5782db1-4102-4c0a-8dfa-ce3e1bbdeeed": "95f4b8ab-ac5f-8527-a628-6c03adcc5598",
         "925cf25c-355c-409a-9cbd-4772df9ffa69": "bbcde23c-7f43-4713-beb9-54f497edc22e",
         "f4466195-f61a-4311-a2c0-12458ddd6b5c": "e06d6648-ac05-478c-962b-c69a2636b5a8",
         "51c70275-5a4b-4f94-83d2-3bf0f2095cf6": "f4cec45f-a827-45bd-892b-a4ab5c64f6f0",
@@ -1425,7 +1425,14 @@
       "__Prefab": "zombie.prefab",
       "__PrefabInstancePatch": {
         "AddedObjects": [],
-        "RemovedObjects": [],
+        "RemovedObjects": [
+          {
+            "Id": {
+              "Type": "Component",
+              "IdValue": "110cfca4-20ab-4ffc-abce-ad492a971d72"
+            }
+          }
+        ],
         "PropertyOverrides": [
           {
             "Target": {
@@ -1468,7 +1475,7 @@
         "16f18b8d-1d7c-4af8-b504-df41afa604b1": "078ef42c-116c-4f93-9a4e-8ebffc89b6af",
         "f7d05828-0a5c-4208-9f45-db3eaea7c8b0": "3382bbf9-08c1-42cf-93e9-b9e152939082",
         "716c7ba4-1700-41ac-be08-ff0b7cfe044f": "56926904-32e4-48b2-acd4-cff5780c1f63",
-        "827ea8a7-7736-43b2-8a44-1489a9914d25": "f37f7827-eca6-8a1d-9181-b6bc861dc2d8"
+        "110cfca4-20ab-4ffc-abce-ad492a971d72": "a1b76157-2b40-85fd-a7d5-21949932d6ac"
       }
     }
   ],

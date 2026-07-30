@@ -19,7 +19,7 @@ public sealed class BulletShooter : Component
 		if ( BulletPrefab is null ) return;
 
 		var ray = Scene.Camera.ScreenPixelToRay( Mouse.Position );
-		var plane = new Plane( WorldPosition, Vector3.Up );
+		var plane = new Plane( WorldPosition, Vector3.Up);
 		var hit = plane.Trace( ray, true );
 
 		if ( !hit.HasValue ) return;
@@ -31,7 +31,7 @@ public sealed class BulletShooter : Component
 		var rotation = Rotation.LookAt( direction, Vector3.Up );
 
 		var bullet = GameObject.Clone( BulletPrefab );
-		bullet.WorldPosition = WorldPosition + direction * SpawnDistance;
+		bullet.WorldPosition = WorldPosition + (Vector3.Up * 30) + direction * SpawnDistance;
 		bullet.WorldRotation = rotation;
 	}
 }
