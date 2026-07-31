@@ -93,8 +93,8 @@
     private float MarkerY =>
         (((-Player?.WorldPosition.y ?? 0) + WorldHalfSize) / (WorldHalfSize * 2)) * MapSize;
 
-    private string MarkerXpx => $"{MarkerX}px";
-    private string MarkerYpx => $"{MarkerY}px";
+    private string MarkerXpx => $"{MarkerX-8}px";
+    private string MarkerYpx => $"{MarkerY-8}px";
 
     private float PositionX =>
         Player?.WorldPosition.x/10 ?? 0;
